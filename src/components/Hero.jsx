@@ -1,16 +1,46 @@
+import { useEffect, useState } from "react";
+
 function Hero() {
+  const [scrolled, setScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 50) {
+        setScrolled(true);
+      } else {
+        setScrolled(false);
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
   return (
     <section className="relative pt-24">
       <img
         src="public/ChatGPT Image 23 de fev. de 2026, 15_27_43.png"
-        className="w-full"
+        className="w-full h-full"
       />
 
-      <div className="absolute inset-0 flex items-center justify-center">
-        <div className="bg-white py-7 px-111 hover:scale-110 transition-all duration-300 rounded-2xl shadow-2xl">
-          <h1 className="absolute inset-0 flex items-center justify-center text-5xl uppercase tracking-tight font-bold  ">
+      <div
+        className={`absolute inset-0 flex  justify-center ${
+          scrolled ? "bg-black/50 transition-all duration-300 " : ""
+        }`}
+      >
+        <div className="flex flex-col mt-30 items-center">
+          <h1 className="flex mb-4  text-5xl uppercase tracking-tight font-bold text-blue-700 ">
             Sua jornada musical começa aqui
           </h1>
+          <p className="font-bold tracking-tight uppercase text-orange-500">
+            Aprenda com professores experientes, desenvolva seu talento e viva a
+            experiência da música na Praça 22.
+          </p>
+          <button className="mt-110 border-solid bg-orange-500 p-5 rounded-3xl text-4xl font-bold text-white hover:scale-110 transition-all  duration-300 cursor-pointer hover:bg-blue-700">
+            Comece já
+          </button>
         </div>
       </div>
     </section>

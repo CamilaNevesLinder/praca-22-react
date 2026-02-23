@@ -22,7 +22,7 @@ function NavBar() {
 
   return (
     <nav
-      className={`fixed w-full top-0 transition-all duration-300 ${
+      className={`fixed z-100 w-full top-0 transition-all duration-300 ${
         scrolled ? "bg-white shadow-md py-3" : "bg-transparent py-6"
       }`}
     >

@@ -38,7 +38,10 @@ function Hero() {
             Aprenda com professores experientes, desenvolva seu talento e viva a
             experiência da música na Praça 22.
           </p>
-          <button className="mt-110 border-solid bg-orange-500 p-5 rounded-3xl text-4xl font-bold text-white hover:scale-110 transition-all  duration-300 cursor-pointer hover:bg-blue-700">
+          <button
+            className={` mt-80 border-solid bg-orange-500 p-7 rounded-3xl text-5xl font-bold text-white hover:scale-110 transition-all duration-300 cursor-pointer hover:bg-blue-700 ${scrolled ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10 "}
+               `}
+          >
             Comece já
           </button>
         </div>

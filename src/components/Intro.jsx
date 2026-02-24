@@ -1,27 +1,19 @@
 function Intro() {
   return (
-    <section className="flex  justify-center bg-[#031229]">
-      <div></div>
-      <div className="grid grid-cols-3 gap-15 mt-10 ">
-        <div className="ml-10 mb-5">
-          <img
-            src="public/WhatsApp Image 2025-12-05 at 11.34.57.jpeg"
-            className="h-140"
-          />
-        </div>
-        <div className="bg-white py-20 px-10 mb-5">
-          <img
-            src="public/WhatsApp Image 2025-12-05 at 11.34.57 (1).jpeg"
-            className=""
-          />
-        </div>
-        <div className=" mr-10 mb-5">
-          <img
-            src="public/WhatsApp Image 2025-12-05 at 11.34.55 (1).jpeg"
-            className="h-140"
-          />
-        </div>
-      </div>
+    <section className="flex flex-col justify-center bg-[#031229]">
+      <h1 className="text-white font-bold text-3xl uppercase text-center mb-3 ">
+        Sobre nós
+      </h1>
+      <h3 className="text-white m-5 text-2xl text-center">
+        A Praça 22 nasceu do sonho de transformar vidas através da música.
+        Acreditamos que a música vai além das notas e dos acordes,ela conecta
+        pessoas, desperta emoções e desenvolve talentos. Nossa escola é um
+        espaço de aprendizado, criatividade e expressão. Aqui, cada aluno é
+        incentivado a descobrir sua própria identidade musical, seja iniciando
+        os primeiros passos ou aperfeiçoando técnicas já dominadas. Contamos com
+        professores qualificados, metodologia dinâmica e um ambiente acolhedor,
+        onde o ensino acontece de forma leve, prática e inspiradora.
+      </h3>
     </section>
   );
 }
